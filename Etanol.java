@@ -1,18 +1,17 @@
-
-package etanol;
+package gasolina;
 interface Densidad{
     default String Combustible(String costo){
-        return "El consumo de gasolina "+costo+" es económico ";
+        return "El consumo de gasolina"+costo+" es económico ";
     }
 }
 interface Punto_Ebullicion{
     default String Combustible(String costo){
-        return "Se caliente a altas temperaturas por lo que"
+        return "La gasolina se caliente a altas temperaturas y como "
         +costo+"su perdida es menor";
     }
 }
 
-public class Etanol implements Densidad,Punto_Ebullicion {
+public class Gasolina implements Densidad,Punto_Ebullicion {
 /*@Override
     public String Combustible (String costo){
         //Se puede elegir la implementación de una interfaz
@@ -37,8 +36,8 @@ public class Etanol implements Densidad,Punto_Ebullicion {
         System.out.println("Materia: Programacion [7450]");
         System.out.println("\t\t\tHerencia Multiple\n");
 
-        Etanol etanol=new Etanol();
-        System.out.println(etanol.Combustible("\ncuesta menos, por lo tanto: "));
+        Gasolina gasolina=new Gasolina();
+        System.out.println(gasolina.Combustible("\ncuesta menos,por lo tanto: "));
     }
 
 }
